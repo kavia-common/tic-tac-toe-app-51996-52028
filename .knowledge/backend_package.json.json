@@ -1,1 +1,21 @@
-{"is_source_file": false, "format": "", "description": "", "external_files": [], "external_methods": [], "published": [], "classes": [], "methods": [], "calls": [], "search-terms": [], "state": 2, "file_id": 3, "knowledge_revision": 19, "git_revision": "c13973497e520fce731bc7f20403a3f5da611501", "hash": "ee97cf71253b8040629d3c433a0caf4a", "format-version": 4, "code-base-name": "tic-tac-toe-app-51996-52028", "filename": "backend/package.json", "revision_history": [{"19": "c13973497e520fce731bc7f20403a3f5da611501"}]}
+{
+  "is_source_file": false,
+  "format": "",
+  "description": "",
+  "external_files": [],
+  "external_methods": [],
+  "published": [],
+  "classes": [],
+  "methods": [],
+  "calls": [],
+  "search-terms": [],
+  "state": 2,
+  "file_id": 3,
+  "knowledge_revision": 19,
+  "git_revision": "c13973497e520fce731bc7f20403a3f5da611501",
+  "hash": "ee97cf71253b8040629d3c433a0caf4a",
+  "format-version": 4,
+  "code-base-name": "tic-tac-toe-app-51996-52028",
+  "filename": "backend/package.json",
+  "revision_history": [{ "19": "c13973497e520fce731bc7f20403a3f5da611501" }]
+}

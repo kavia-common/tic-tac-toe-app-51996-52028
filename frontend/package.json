@@ -7,7 +7,10 @@
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview --port 3000",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,css,html}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,json,md,css,html}\""
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -19,10 +22,12 @@
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.17.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "prettier": "^3.7.4",
     "vite": "^5.4.11"
   }
 }

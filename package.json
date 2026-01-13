@@ -9,7 +9,14 @@
     "dev:frontend": "npm --prefix frontend run dev",
     "build": "npm --prefix frontend run build",
     "start": "node backend/server.js",
-    "lint": "npm --prefix frontend run lint"
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:fix": "npm run lint:frontend:fix && npm run lint:backend:fix",
+    "lint:frontend": "npm --prefix frontend run lint",
+    "lint:frontend:fix": "npm --prefix frontend run lint:fix",
+    "lint:backend": "npm --prefix backend run lint",
+    "lint:backend:fix": "npm --prefix backend run lint:fix",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,css,html}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,json,md,css,html}\""
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -18,6 +25,8 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
-    "nodemon": "^3.1.9"
+    "eslint-config-prettier": "^10.1.8",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.7.4"
   }
 }

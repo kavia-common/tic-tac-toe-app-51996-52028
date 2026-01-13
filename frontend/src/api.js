@@ -4,7 +4,8 @@
  * Very small API client for the backend REST endpoints.
  */
 
-const API_BASE = typeof __API_BASE__ !== "undefined" ? __API_BASE__ : "http://localhost:8000";
+const API_BASE =
+  typeof __API_BASE__ !== "undefined" ? __API_BASE__ : "http://localhost:8000";
 
 /**
  * PUBLIC_INTERFACE
@@ -37,11 +38,14 @@ export async function getSession(id) {
  * @returns {Promise<{id: string, state: any}>}
  */
 export async function submitMove(id, index) {
-  const res = await fetch(`${API_BASE}/api/sessions/${encodeURIComponent(id)}/moves`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ index })
-  });
+  const res = await fetch(
+    `${API_BASE}/api/sessions/${encodeURIComponent(id)}/moves`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ index }),
+    },
+  );
 
   const payload = await res.json().catch(() => ({}));
   if (!res.ok) {
@@ -60,9 +64,12 @@ export async function submitMove(id, index) {
  * @returns {Promise<{id: string, state: any}>}
  */
 export async function resetSession(id) {
-  const res = await fetch(`${API_BASE}/api/sessions/${encodeURIComponent(id)}/reset`, {
-    method: "POST"
-  });
+  const res = await fetch(
+    `${API_BASE}/api/sessions/${encodeURIComponent(id)}/reset`,
+    {
+      method: "POST",
+    },
+  );
   if (!res.ok) throw new Error(`Failed to reset session (${res.status})`);
   return res.json();
 }

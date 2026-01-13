@@ -28,7 +28,7 @@ function newGameState() {
     winner: evalResult.winner,
     isDraw: evalResult.isDraw,
     isTerminal: evalResult.isTerminal,
-    moveCount: 0
+    moveCount: 0,
   };
 }
 
@@ -95,7 +95,7 @@ function submitMove(id, index) {
     winner: evalResult.winner,
     isDraw: evalResult.isDraw,
     isTerminal: evalResult.isTerminal,
-    moveCount: state.moveCount + 1
+    moveCount: state.moveCount + 1,
   };
 
   return { session };
@@ -105,5 +105,5 @@ module.exports = {
   createSession,
   getSession,
   resetSession,
-  submitMove
+  submitMove,
 };

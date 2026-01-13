@@ -21,7 +21,7 @@ const WIN_LINES = [
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
-  [2, 4, 6]
+  [2, 4, 6],
 ];
 
 /**
@@ -74,7 +74,11 @@ function validateMove(board, index, isTerminal) {
     return { ok: false, code: "GAME_OVER", error: "Game is already over" };
   }
   if (!Number.isInteger(index) || index < 0 || index > 8) {
-    return { ok: false, code: "BAD_INDEX", error: "Index must be an integer between 0 and 8" };
+    return {
+      ok: false,
+      code: "BAD_INDEX",
+      error: "Index must be an integer between 0 and 8",
+    };
   }
   if (board[index] !== null) {
     return { ok: false, code: "CELL_TAKEN", error: "Cell is already taken" };
@@ -85,5 +89,5 @@ function validateMove(board, index, isTerminal) {
 module.exports = {
   createEmptyBoard,
   evaluateBoard,
-  validateMove
+  validateMove,
 };

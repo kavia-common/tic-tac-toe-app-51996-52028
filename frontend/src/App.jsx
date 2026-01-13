@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createSession, resetSession, submitMove } from "./api.js";
 
 function formatStatus(state) {
@@ -114,7 +114,9 @@ export default function App() {
                 aria-label={`Cell ${idx + 1}${value ? `, ${value}` : ""}`}
                 onClick={() => handleCellClick(idx)}
               >
-                <span className={`mark ${value ? "filled" : ""}`}>{value || ""}</span>
+                <span className={`mark ${value ? "filled" : ""}`}>
+                  {value || ""}
+                </span>
               </button>
             );
           })}
@@ -123,7 +125,8 @@ export default function App() {
         <footer className="footer">
           <div className="meta">
             <div>
-              <strong>Session:</strong> {sessionId ? sessionId.slice(0, 8) : "—"}
+              <strong>Session:</strong>{" "}
+              {sessionId ? sessionId.slice(0, 8) : "—"}
             </div>
             <div>
               <strong>Moves:</strong> {gameState?.moveCount ?? 0}

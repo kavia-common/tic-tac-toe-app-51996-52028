@@ -18,11 +18,11 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     define: {
-      __API_BASE__: JSON.stringify(apiBase)
+      __API_BASE__: JSON.stringify(apiBase),
     },
     server: {
       port: Number(env.REACT_APP_PORT || 3000),
-      strictPort: true
-    }
+      strictPort: true,
+    },
   };
 });

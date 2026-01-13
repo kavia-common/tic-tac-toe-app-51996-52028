@@ -12,11 +12,11 @@ export default [
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
-      globals: globals.node
+      globals: globals.node,
     },
     rules: {
-      ...js.configs.recommended.rules
-    }
+      ...js.configs.recommended.rules,
+    },
   },
 
   // App source (browser + JSX)
@@ -26,18 +26,18 @@ export default [
       ecmaVersion: 2022,
       sourceType: "module",
       parserOptions: {
-        ecmaFeatures: { jsx: true }
+        ecmaFeatures: { jsx: true },
       },
-      globals: globals.browser
+      globals: globals.browser,
     },
     plugins: {
       "react-hooks": reactHooks,
-      "react-refresh": reactRefresh
+      "react-refresh": reactRefresh,
     },
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }]
-    }
-  }
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+    },
+  },
 ];

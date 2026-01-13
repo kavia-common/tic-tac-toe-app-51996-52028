@@ -31,8 +31,17 @@ body {
     Arial,
     "Apple Color Emoji",
     "Segoe UI Emoji";
-  background: radial-gradient(1000px 600px at 20% 10%, rgba(122, 162, 255, 0.22), transparent 60%),
-    radial-gradient(900px 500px at 80% 20%, rgba(255, 107, 122, 0.16), transparent 55%),
+  background:
+    radial-gradient(
+      1000px 600px at 20% 10%,
+      rgba(122, 162, 255, 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 80% 20%,
+      rgba(255, 107, 122, 0.16),
+      transparent 55%
+    ),
     var(--bg);
   color: var(--text);
 }
@@ -46,7 +55,8 @@ body {
 
 .card {
   width: min(520px, 100%);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent), var(--card);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent), var(--card);
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 22px;
@@ -118,7 +128,7 @@ body {
   padding: 12px;
   border: 1px solid var(--border);
   border-radius: 16px;
-  background: rgba(0, 0, 0, 0.10);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .cell {
@@ -130,7 +140,10 @@ body {
   cursor: pointer;
   display: grid;
   place-items: center;
-  transition: background 120ms ease, transform 80ms ease, border-color 120ms ease;
+  transition:
+    background 120ms ease,
+    transform 80ms ease,
+    border-color 120ms ease;
 }
 
 .cell:hover:enabled {
