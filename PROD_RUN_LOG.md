@@ -50,3 +50,10 @@ Open:
   npm audit fix
   ```
   (This may update `package-lock.json`.)
+
+## Verification (this run)
+
+- Started: `PORT=8000 NODE_ENV=production node backend/server.js`
+- Health: `GET /healthz` -> `200` body: `{"ok":true,"env":"production"}`
+- Homepage: `GET /` -> `200` and served Vite-built HTML referencing `/assets/*`
+- Asset: `GET /assets/*.js` -> `200`
