@@ -1,0 +1,2 @@
+This project intentionally does not include tests as they were not requested.
+Core logic is implemented in backend/src/gameLogic.js and can be unit-tested later if needed.

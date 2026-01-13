@@ -1,0 +1,23 @@
+{
+  "name": "tic-tac-toe-monolith",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monolithic Tic Tac Toe app (React frontend + Node/Express backend)",
+  "scripts": {
+    "dev": "concurrently -k -n BACKEND,FRONTEND -c blue,green \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "nodemon --watch backend --ext js,json --exec \"node backend/server.js\"",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "start": "node backend/server.js",
+    "lint": "npm --prefix frontend run lint"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "4.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  }
+}
